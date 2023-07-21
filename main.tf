@@ -287,7 +287,7 @@ resource "aws_resourcegroups_group" "ec2_resource_group" {
     }
 }
 ################################################### 2. COMPUTE ################################################### }
-
+/*
 ################################################### 3. DATABASE ################################################### {
 resource "random_string" "password" {
   length  = 10
@@ -366,7 +366,7 @@ module "redis" {
 ################################################### 3. DATABASE ################################################### }
 
 ## The code below will be used in Disaster Recovery class. Don't delete below comments before Day 10.
-/*
+
 ####################################### 4. DISATER RECOVERY - Service Region ####################################### {
 resource "aws_docdb_cluster_parameter_group" "emarket_docdb_param" {
     family      = "docdb4.0"
@@ -400,7 +400,7 @@ resource "aws_docdb_cluster" "emarket_docdb_cluster" {
     deletion_protection = false
 }
 ####################################### 4. DISATER RECOVERY - Service Region ####################################### }
-
+*/
 ######################################### 5. DISATER RECOVERY - DR Region ######################################### {
 # mariadb parameter group in DR Region
 resource "aws_db_parameter_group" "rds_pg_dr" {
@@ -442,4 +442,4 @@ resource "aws_docdb_cluster_parameter_group" "emarket_docdb_param_dr" {
     }
 }
 ######################################### 5. DISATER RECOVERY - DR Region ######################################### }
-*/
+
